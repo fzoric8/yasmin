@@ -231,6 +231,20 @@ This viewer allows monitoring YASMIN's FSM. It is implemented with Flask and Rea
 
 ![](./images/viewer.gif)
 
+### Comments
+
+It's quite similar to the smach which is used in ROS1. 
+
+It also provides action and service interfaces. 
+Main problem with current yasmin demo implementation is current pose propagation. 
+State is initialized during creation of state machine, therefore, stuff passed 
+as argument in constructor is initialized as a member of State class
+and becomes decoupled from reality. 
+
+Figure out how to: 
+ * create move_uav state (action server maybe) 
+ * test move_uav state 
+
 ### Usage
 
 ```shell
